@@ -1,0 +1,10 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        bind:
+            $cookies: '%fluffy.gdpr.cookies%'
+
+    FluffyFactory\Bundle\GdprBundle\:
+        resource: '../../*'
+        exclude: '../../{DependencyInjection,Entity,Migrations,Tests,Kernel.php}'

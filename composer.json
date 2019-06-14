@@ -1,0 +1,36 @@
+{
+    "name": "fluffy-factory/gdpr-bundle",
+    "license": "MIT",
+    "type": "symfony-bundle",
+    "description": "GDPR Bundle",
+    "keywords": [
+        "symfony",
+        "bundle",
+        "GDPR"
+    ],
+    "homepage": "https://github.com/FluffyFactory/GdprBundle",
+    "authors": [
+        {
+            "name": "Antonin M",
+            "email": "arkanen@gmail.com"
+        },
+        {
+            "name": "Masth0",
+            "email": "dev.masth0@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "FluffyFactory\\Bundle\\GdprBundle\\": ""
+        },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "extra": {
+        "installer-name": "GdprBundle"
+    }
+}
