@@ -2,18 +2,11 @@
 
 namespace FluffyFactory\Bundle\GdprBundle\Form;
 
-use Exception;
 use FluffyFactory\Bundle\GdprBundle\Service\CookieService;
-use Plugandcom\Bundle\DigistratBundle\Model\SubList;
-use Plugandcom\Bundle\DigistratBundle\Service\DigistratService;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\ChoiceList\Factory\ChoiceListFactoryInterface;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\FormBuilderInterface;
-use Symfony\Component\Form\FormEvent;
-use Symfony\Component\Form\FormEvents;
 use Symfony\Component\HttpFoundation\RequestStack;
-use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Validator\Constraints\NotNull;
 
 class CookiesType extends AbstractType
@@ -54,14 +47,6 @@ class CookiesType extends AbstractType
                 ]
             ]);
         }
-
-        $builder->addEventListener(FormEvents::POST_SUBMIT, function (FormEvent $event) {
-            if ($event->getForm()->isValid()) {
-                // TODO : Créer les cookies / leur assigner la valeur
-                $data = $event->getData();
-                dd('lol');
-            }
-        });
     }
 
 }
