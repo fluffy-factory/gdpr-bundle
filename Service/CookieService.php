@@ -4,6 +4,7 @@ namespace FluffyFactory\Bundle\GdprBundle\Service;
 
 
 use FluffyFactory\Bundle\GdprBundle\Model\Cookie;
+use Symfony\Component\HttpFoundation\RequestStack;
 
 class CookieService
 {
@@ -13,9 +14,15 @@ class CookieService
      */
     private $cookies;
 
-    public function __construct(array $cookies)
+    /**
+     * @var RequestStack
+     */
+    private $requestStack;
+
+    public function __construct(array $cookies, RequestStack $requestStack)
     {
         $this->cookies = $this->parseCookies($cookies);
+        $this->requestStack = $requestStack;
     }
 
     private function parseCookies(array $cookies)
@@ -43,6 +50,14 @@ class CookieService
     }
 
     /**
+     * @return array
+     */
+    public function getCurrentCookies()
+    {
+        return $this->requestStack->getCurrentRequest()->cookies->all();
+    }
+
+    /**
      * @return Cookie[]
      */
     private function filterCookies(bool $required): array
@@ -67,5 +82,4 @@ class CookieService
     {
         return $this->filterCookies(false);
     }
-
 }
