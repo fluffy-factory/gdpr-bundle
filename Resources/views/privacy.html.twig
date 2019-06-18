@@ -1,33 +1,31 @@
 {% trans_default_domain 'fluffy_gdpr' %}
 <head></head>
-<body>
-    {% block required_cookies_table %}
-        <h2>{{ 'required_cookies_title'|trans }}</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Cookie</th>
-                    <th>{{ 'Description'|trans }}</th>
-                    <th>{{ 'Name'|trans }}</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for cookie in required_cookies %}
-                    <tr>
-                        <td>{{ cookie.name|trans }}</td>
-                        <td>{{ cookie.description|trans }}</td>
-                        <td>{{ cookie.detail|trans }}</td>
-                    </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    {% endblock %}
+{% block required_cookies_table %}
+    <h2 id="params">{{ 'required_cookies_title'|trans }}</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Cookie</th>
+            <th>{{ 'Description'|trans }}</th>
+            <th>{{ 'Name'|trans }}</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for cookie in required_cookies %}
+            <tr>
+                <td>{{ cookie.name|trans }}</td>
+                <td>{{ cookie.description|trans }}</td>
+                <td>{{ cookie.detail|trans }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
 
-    {% block optionnal_cookies_table %}
-        <h2>{{ 'optionnal_cookies_title'|trans }}</h2>
-        {{ form_start(form) }}
-            {{ form_row(form) }}
-            <button type="submit">GOGOGO</button>
-        {{ form_end(form) }}
-    {% endblock %}
-</body>
+{% block optionnal_cookies_table %}
+    <h2>{{ 'optionnal_cookies_title'|trans }}</h2>
+    {{ form_start(form) }}
+    {{ form_row(form) }}
+    <button type="submit">GOGOGO</button>
+    {{ form_end(form) }}
+{% endblock %}
