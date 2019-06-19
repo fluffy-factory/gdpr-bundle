@@ -53,5 +53,6 @@ if (optionnalCookies.length > 0 && $ffCookiesBar && $ffCookiesAllow && $ffCookie
   $ffCookiesAllow.addEventListener('click', function(e) {
     e.preventDefault();
     addCookies(optionnalCookies, '1');
+    window.location.reload();
   });
 }
