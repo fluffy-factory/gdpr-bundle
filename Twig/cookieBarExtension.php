@@ -25,6 +25,7 @@ class cookieBarExtension extends AbstractExtension
     {
         return [
             new TwigFunction('showCookieBar', [$this, 'showCookieBar']),
+            new TwigFunction('getOptionnalCookiesNames', [$this, 'getOptionnalCookiesNames'], ['is_safe' => ['html']]),
         ];
     }
 
@@ -40,5 +41,13 @@ class cookieBarExtension extends AbstractExtension
         }
 
         return false;
+    }
+
+    /**
+     * @return string
+     */
+    public function getOptionnalCookiesNames(): string
+    {
+        return json_encode(array_keys($this->cookieService->getOptionnalCookies()));
     }
 }

@@ -27,3 +27,31 @@ function getCookie(name) {
   var parts = value.split('; ' + name + '=');
   return parts.length < 2 ? undefined : parts.pop().split(';').shift();
 }
+
+/**
+ *  Add all cookies...
+ * @param {string[]} $cookieNames
+ * @param {string} value
+ */
+function addCookies($cookieNames, value) {
+  for (var i = 0; i < optionnalCookies.length; i++) {
+    setCookie(optionnalCookies[i], value);
+  }
+  document.body.removeChild($ffCookiesBar);
+}
+
+var $ffCookiesBar = document.getElementById('js-ff-cookie-bar');
+var $ffCookiesDeny = document.getElementById('js-ff-cookies-deny');
+var $ffCookiesAllow = document.getElementById('js-ff-cookies-allow');
+
+if (optionnalCookies.length > 0 && $ffCookiesBar && $ffCookiesAllow && $ffCookiesDeny) {
+  $ffCookiesDeny.addEventListener('click', function(e) {
+    e.preventDefault();
+    addCookies(optionnalCookies, '0');
+  });
+
+  $ffCookiesAllow.addEventListener('click', function(e) {
+    e.preventDefault();
+    addCookies(optionnalCookies, '1');
+  });
+}
