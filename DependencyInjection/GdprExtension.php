@@ -26,6 +26,7 @@ class GdprExtension extends Extension
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
         $loader->load('services.yaml');
 
-        $container->setParameter('fluffy.gdpr.cookies', $configs[0]);
+        $container->setParameter('fluffy.gdpr.design', $config['design']);
+        $container->setParameter('fluffy.gdpr.cookies', $config);
     }
 }

@@ -52,9 +52,18 @@ class CookieService
     /**
      * @return array
      */
-    public function getCurrentCookies()
+    public function getUserCookies()
     {
         return $this->requestStack->getCurrentRequest()->cookies->all();
+    }
+
+    /**
+     * @param string $name
+     * @return mixed
+     */
+    public function getUserCookie(string $name)
+    {
+        return $this->requestStack->getCurrentRequest()->cookies->get($name);
     }
 
     /**
