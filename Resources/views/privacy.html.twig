@@ -1,21 +1,21 @@
 {% trans_default_domain 'fluffy_gdpr' %}
 <head></head>
 {% block required_cookies_table %}
-    <h2 id="params">{{ 'required_cookies_title'|trans }}</h2>
+    <h2 id="params">{{ 'required_cookies_title'|trans(domain='GdprBundle') }}</h2>
     <table>
         <thead>
         <tr>
             <th>Cookie</th>
-            <th>{{ 'Description'|trans }}</th>
-            <th>{{ 'Name'|trans }}</th>
+            <th>{{ 'Description'|trans(domain='GdprBundle') }}</th>
+            <th>{{ 'Name'|trans(domain='GdprBundle') }}</th>
         </tr>
         </thead>
         <tbody>
         {% for cookie in required_cookies %}
             <tr>
-                <td>{{ cookie.name|trans }}</td>
-                <td>{{ cookie.description|trans }}</td>
-                <td>{{ cookie.detail|trans }}</td>
+                <td>{{ cookie.name|trans(domain='GdprBundle') }}</td>
+                <td>{{ cookie.description|trans(domain='GdprBundle') }}</td>
+                <td>{{ cookie.detail|trans(domain='GdprBundle') }}</td>
             </tr>
         {% endfor %}
         </tbody>
@@ -23,7 +23,7 @@
 {% endblock %}
 
 {% block optionnal_cookies_table %}
-    <h2>{{ 'optionnal_cookies_title'|trans }}</h2>
+    <h2>{{ 'optionnal_cookies_title'|trans(domain='GdprBundle') }}</h2>
     {{ form_start(form) }}
     {{ form_row(form) }}
     <button type="submit">GOGOGO</button>
