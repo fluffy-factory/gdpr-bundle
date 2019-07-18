@@ -17,6 +17,7 @@
   padding: 20px;
   max-width: 400px;
   font-family: sans-serif;
+  z-index: 99;
 }
 
 .ff-cookie_bar *:before,
