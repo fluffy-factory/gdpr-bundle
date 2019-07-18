@@ -1,12 +1,14 @@
 required_cookies_title: 'Cookies que nous utilisons'
 optionnal_cookies_title: 'Paramétrez vos cookies'
 
-Name: 'Nom et échéance'
+Details: 'Nom et échéance'
 
 # Cookie bar
-Cookie_bar_title: 'Ce site utililse des cookies'
+Cookie_bar_title: 'Ce site utilise des cookies'
 Cookie_bar_message: 'En poursuivant votre navigation sur ce site, vous acceptez l’utilisation de [Cookies ou autres traceurs] pour vous proposer [Par exemple, des publicités ciblées adaptés à vos centres d’intérêts] et [Par exemple, réaliser des statistiques de visites].'
 See_more: 'En savoir plus'
 Set_cookies: 'Paramétrer vos cookies'
 Accept_cookies: "J'accepte"
 Deny_cookies: 'Je refuse'
+Description: 'Description'
+Cookie_name: 'Nom du cookie'

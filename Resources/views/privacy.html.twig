@@ -1,12 +1,11 @@
-<head></head>
 {% block required_cookies_table %}
     <h2 id="params">{{ 'required_cookies_title'|trans({},'GdprBundle') }}</h2>
     <table>
         <thead>
         <tr>
-            <th>Cookie</th>
+            <th>{{ 'Cookie_name'|trans({},'GdprBundle') }}</th>
             <th>{{ 'Description'|trans({},'GdprBundle') }}</th>
-            <th>{{ 'Name'|trans({},'GdprBundle') }}</th>
+            <th>{{ 'Details'|trans({},'GdprBundle') }}</th>
         </tr>
         </thead>
         <tbody>
@@ -25,6 +24,6 @@
     <h2>{{ 'optionnal_cookies_title'|trans({},'GdprBundle') }}</h2>
     {{ form_start(form) }}
     {{ form_row(form) }}
-    <button type="submit">GOGOGO</button>
+    <button type="submit">{{ 'Accept_cookies'|trans({},'GdprBundle') }}</button>
     {{ form_end(form) }}
 {% endblock %}

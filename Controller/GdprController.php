@@ -24,7 +24,7 @@ class GdprController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $data = $form->getData();
-            $response = new RedirectResponse($this->generateUrl('homepage')); // TODO mettre route redirigée dans les params du bundle yaml, et par défaut rediriger ici
+            $response = new RedirectResponse($this->generateUrl($cookieService->getRedirectionUrl()));
 
             foreach ($data as $k => $value) {
                 $expireDate = new \DateTime();

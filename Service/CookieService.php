@@ -4,6 +4,7 @@ namespace FluffyFactory\Bundle\GdprBundle\Service;
 
 
 use FluffyFactory\Bundle\GdprBundle\Model\Cookie;
+use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 use Symfony\Component\HttpFoundation\RequestStack;
 
 class CookieService
@@ -19,10 +20,16 @@ class CookieService
      */
     private $requestStack;
 
-    public function __construct(array $cookies, RequestStack $requestStack)
+    /**
+     * @var ParameterBagInterface
+     */
+    private $params;
+
+    public function __construct(array $cookies, RequestStack $requestStack, ParameterBagInterface $params)
     {
         $this->cookies = $this->parseCookies($cookies);
         $this->requestStack = $requestStack;
+        $this->params = $params;
     }
 
     private function parseCookies(array $cookies)
@@ -90,5 +97,10 @@ class CookieService
     public function getOptionnalCookies(): array
     {
         return $this->filterCookies(false);
+    }
+
+    public function getRedirectionUrl(): string
+    {
+        return $this->params->get('fluffy.gdpr.redirection_url');
     }
 }

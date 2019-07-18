@@ -1,4 +1,8 @@
-<div id="js-ff-cookie-bar" class="ff-cookie_bar" style="background-color: {{ getDesign('bg_color') }}; color: {{ getDesign('text_color') }}">
+<div id="js-ff-cookie-bar" class="ff-cookie_bar"
+    {% if not getDesign('disable') %}
+        style="background-color: {{ getDesign('bg_color') }}; color: {{ getDesign('text_color') }}"
+    {% endif %}
+>
     {# Header #}
     <div class="ff-cookie_bar_header">
         <p>{{ 'Cookie_bar_title'|trans({},'GdprBundle') }}</p>
@@ -18,11 +22,17 @@
     {# Footer #}
     <div class="ff-cookie_bar_footer">
         <a href="" id="js-ff-cookies-deny" class="ff-cookie_bar_btn deny"
-           style="background-color: {{ getDesign('btn_deny_bg_color') }}; color: {{ getDesign('btn_deny_text_color') }}">
+            {% if not getDesign('disable') %}
+               style="background-color: {{ getDesign('btn_deny_bg_color') }}; color: {{ getDesign('btn_deny_text_color') }}"
+            {% endif %}
+        >
             {{ 'Deny_cookies'|trans({},'GdprBundle') }}
         </a>
         <a href="" id="js-ff-cookies-allow" class="ff-cookie_bar_btn allow"
-           style="background-color: {{ getDesign('btn_allow_bg_color') }}; color: {{ getDesign('btn_allow_text_color') }}">
+            {% if not getDesign('disable') %}
+                style="background-color: {{ getDesign('btn_allow_bg_color') }}; color: {{ getDesign('btn_allow_text_color') }}"
+            {% endif %}
+        >
             {{ 'Accept_cookies'|trans({},'GdprBundle') }}
         </a>
     </div>
