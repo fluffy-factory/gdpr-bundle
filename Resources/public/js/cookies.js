@@ -44,12 +44,14 @@ var $ffCookiesBar = document.getElementById('js-ff-cookie-bar');
 var $ffCookiesDeny = document.getElementById('js-ff-cookies-deny');
 var $ffCookiesAllow = document.getElementById('js-ff-cookies-allow');
 
-if (optionnalCookies.length > 0 && $ffCookiesBar && $ffCookiesAllow && $ffCookiesDeny) {
-  $ffCookiesDeny.addEventListener('click', function(e) {
+if (optionnalCookies.length > 0 && $ffCookiesBar && $ffCookiesDeny) {
+  $ffCookiesDeny.addEventListener('click', function (e) {
     e.preventDefault();
     addCookies(optionnalCookies, '0');
   });
+}
 
+if (optionnalCookies.length > 0 && $ffCookiesBar && $ffCookiesAllow) {
   $ffCookiesAllow.addEventListener('click', function(e) {
     e.preventDefault();
     addCookies(optionnalCookies, '1');
