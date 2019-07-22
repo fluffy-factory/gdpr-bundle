@@ -1,6 +1,5 @@
 {
     "name": "fluffy-factory/gdpr-bundle",
-    "version": "1.0.1",
     "license": "MIT",
     "type": "symfony-bundle",
     "description": "GDPR Bundle",
