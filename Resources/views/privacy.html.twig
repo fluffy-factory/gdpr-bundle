@@ -22,8 +22,15 @@
 
 {% block optionnal_cookies_table %}
     <h2>{{ 'optionnal_cookies_title'|trans({},'GdprBundle') }}</h2>
+
     {{ form_start(form) }}
-    {{ form_row(form) }}
+    {% for key, optionnal in optionnal_cookies %}
+        {{ optionnal.name }}
+        {{ form_widget(form[key]) }}
+        <p>{{ optionnal.description }}</p>
+        <p>{{ optionnal.detail }}</p>
+    {% endfor %}
+
     <button type="submit">{{ 'Accept_cookies'|trans({},'GdprBundle') }}</button>
     {{ form_end(form) }}
 {% endblock %}

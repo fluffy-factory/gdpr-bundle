@@ -37,6 +37,7 @@ class GdprController extends AbstractController
         }
 
         return $this->render('@Gdpr/privacy.html.twig', [
+            'optionnal_cookies' => $cookieService->getOptionnalCookies(),
             'required_cookies' => $cookieService->getRequiredCookies(),
             'form' => $form->createView()
         ]);
