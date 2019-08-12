@@ -1,0 +1,14 @@
+required_cookies_title: 'Cookies que usamos'
+optionnal_cookies_title: 'Gestión de cookies'
+
+Details: 'Nombre y fecha límite'
+
+# Cookie bar
+Cookie_bar_title: 'Este sitio web utiliza cookies'
+Cookie_bar_message: 'Al continuar su navegación en este sitio, acepta el uso de [Cookies u otros trazadores] que le proponen [Por ejemplo, anuncios dirigidos adaptados a sus intereses] y [Por ejemplo, para llevar a cabo estadísticas de visitas].'
+See_more: 'más información'
+Set_cookies: 'Gestión de cookies'
+Accept_cookies: "Si, acepto"
+Deny_cookies: 'Me niego'
+Description: 'Descripción'
+Cookie_name: 'Nombre de Cookie'

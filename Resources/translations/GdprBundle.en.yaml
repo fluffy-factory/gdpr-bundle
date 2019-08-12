@@ -1,0 +1,14 @@
+required_cookies_title: 'Cookies we use'
+optionnal_cookies_title: 'Cookie management'
+
+Details: 'Name and deadline'
+
+# Cookie bar
+Cookie_bar_title: 'This website uses cookies'
+Cookie_bar_message: 'By continuing your navigation on this site, you accept the use of [Cookies or other tracers] that propose you [For example, targeted advertisements adapted to your interests] and [For example, to carry out statistics of visits].'
+See_more: 'Learn more'
+Set_cookies: 'Cookie management'
+Accept_cookies: "I agree"
+Deny_cookies: 'I refuse'
+Description: 'Description'
+Cookie_name: "Cookie's name"
