@@ -5,7 +5,7 @@
  * @param {string} path
  * @param {boolean} secure
  */
-export function setCookie(name, value, path ='/', secure) {
+function setCookie(name, value, path ='/', secure) {
   var expireDate = new Date();
   expireDate.setMonth(expireDate.getMonth() + 12);
   var _nameValue = name + '=' + value + '; ';
