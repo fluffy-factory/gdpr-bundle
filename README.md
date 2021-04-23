@@ -60,13 +60,13 @@ gdpr:
 {# privacy.html.twig #}
 
 {% block required_cookies_table %}
-    <h2 id="params">{{ 'required_cookies_title'|trans({},'GdprBundle') }}</h2>
+    <h2 id="params">{{ 'cookies.required.title'|trans({},'GdprBundle') }}</h2>
     <table>
         <thead>
         <tr>
-            <th>Cookie</th>
-            <th>{{ 'Description'|trans({},'GdprBundle') }}</th>
-            <th>{{ 'Name'|trans({},'GdprBundle') }}</th>
+            <th>{{ 'cookies.name'|trans({},'GdprBundle') }}</th>
+            <th>{{ 'cookies.description'|trans({},'GdprBundle') }}</th>
+            <th>{{ 'cookies.details'|trans({},'GdprBundle') }}</th>
         </tr>
         </thead>
         <tbody>
@@ -82,10 +82,17 @@ gdpr:
 {% endblock %}
 
 {% block optionnal_cookies_table %}
-    <h2>{{ 'optionnal_cookies_title'|trans({},'GdprBundle') }}</h2>
+    <h2>{{ 'cookies.optionnal.title'|trans({},'GdprBundle') }}</h2>
+
     {{ form_start(form) }}
-    {{ form_row(form) }}
-    <button type="submit">send</button>
+    {% for key, optionnal in optionnal_cookies %}
+        {{ optionnal.name }}
+        {{ form_widget(form[key]) }}
+        <p>{{ optionnal.description }}</p>
+        <p>{{ optionnal.detail }}</p>
+    {% endfor %}
+
+    <button type="submit">{{ 'cookies.accept'|trans({},'GdprBundle') }}</button>
     {{ form_end(form) }}
 {% endblock %}
 ```
