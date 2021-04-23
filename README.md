@@ -1,13 +1,20 @@
 # Gdpr Bundle
 
 ## Installation
+
+Install package
 ```
 composer require fluffy-factory/gdpr-bundle
 ```
 
+Install assets
+```
+php bin/console asset:install
+```
+
 ## Configuration
 ```yaml
-# gdpr.yaml
+# config/packages/gdpr.yaml
 
 gdpr:
   redirection_url: 'fluffy_gdpr'
@@ -42,7 +49,7 @@ If the design.disable property is true so the *style* attribute will not be adde
 The bundle provide the route 'fluffy_gdpr'. You can edit the content to explain your cookies and configure them.
 
 ```yaml
-# routes/gdpr.yaml
+# config/routes/gdpr.yaml
 
 gdpr:
   resource: "@GdprBundle/Controller/GdprController.php"
@@ -81,7 +88,6 @@ gdpr:
     <button type="submit">send</button>
     {{ form_end(form) }}
 {% endblock %}
-
 ```
 
 ##### Twig  
@@ -92,17 +98,24 @@ Add this script tag, the `cookies.js` script need it to knows which cookies writ
         var optionnalCookies = {{ getOptionnalCookiesNames() }}
     </script>
 </head>
+
+{% block javascripts %}
+    <script src="{{ asset('bundles/gdpr/js/cookies.js') }}"></script>
+{% endblock %}
 ```
-  
+
+Add stylesheets
+```twig
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('bundles/gdpr/css/style.css') }}">
+{% endblock %}
+```
+
 **showCookieBar()** check if the user already has all your cookies from the configuration file.
 ```twig
 {% if showCookieBar() %}
     {% include '@Gdpr/cookie_bar.html.twig' %}
 {% endif %}
-
-{% block javascripts %}
-    <script src="{{ asset('js/ff-gdpr-cookies.js') }}"></script>
-{% endblock %}
 ```
 
 In case of optionnals cookies you can manage them in case-by-case with the twig function **allowedCookie('cookie_name')**
