@@ -2,14 +2,12 @@
 
 namespace FluffyFactory\Bundle\GdprBundle\Service;
 
-
 use FluffyFactory\Bundle\GdprBundle\Model\Cookie;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 use Symfony\Component\HttpFoundation\RequestStack;
 
 class CookieService
 {
-
     /**
      * @var array
      */
@@ -99,6 +97,9 @@ class CookieService
         return $this->filterCookies(false);
     }
 
+    /**
+     * @return string
+     */
     public function getRedirectionUrl(): string
     {
         return $this->params->get('fluffy.gdpr.redirection_url');

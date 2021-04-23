@@ -1,8 +1,6 @@
 <?php
 
-
 namespace FluffyFactory\Bundle\GdprBundle\Twig;
-
 
 use FluffyFactory\Bundle\GdprBundle\Service\CookieService;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
@@ -11,7 +9,6 @@ use Twig\TwigFunction;
 
 class cookieBarExtension extends AbstractExtension
 {
-
     /**
      * @var CookieService
      */
@@ -33,6 +30,7 @@ class cookieBarExtension extends AbstractExtension
             new TwigFunction('showCookieBar', [$this, 'showCookieBar']),
             new TwigFunction('getOptionnalCookiesNames', [$this, 'getOptionnalCookiesNames'], ['is_safe' => ['html']]),
             new TwigFunction('getDesign', [$this, 'getDesign']),
+            new TwigFunction('showBtn', [$this, 'showBtn']),
             new TwigFunction('allowedCookie', [$this, 'allowedCookie']),
         ];
     }
@@ -68,7 +66,20 @@ class cookieBarExtension extends AbstractExtension
         return $this->params->get('fluffy.gdpr.design')[$key];
     }
 
-    public function allowedCookie(string $cookieName)
+    /**
+     * @param string $key
+     * @return bool
+     */
+    public function showBtn(string $key): bool
+    {
+        return $this->params->get('fluffy.gdpr.btn')[$key];
+    }
+
+    /**
+     * @param string $cookieName
+     * @return bool
+     */
+    public function allowedCookie(string $cookieName): bool
     {
         return $this->cookieService->getUserCookie($cookieName) === "1";
     }

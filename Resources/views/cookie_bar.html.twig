@@ -1,7 +1,7 @@
 <div id="js-ff-cookie-bar" class="ff-cookie_bar"
-    {% if not getDesign('disable') %}
-        style="background-color: {{ getDesign('bg_color') }}; color: {{ getDesign('text_color') }}"
-    {% endif %}
+        {% if not getDesign('disable') %}
+            style="background-color: {{ getDesign('bg_color') }}; color: {{ getDesign('text_color') }}"
+        {% endif %}
 >
     {# Header #}
     <div class="ff-cookie_bar_header">
@@ -20,20 +20,26 @@
     </div>
 
     {# Footer #}
-    <div class="ff-cookie_bar_footer">
-        <a href="" id="js-ff-cookies-deny" class="ff-cookie_bar_btn deny"
-            {% if not getDesign('disable') %}
-               style="background-color: {{ getDesign('btn_deny_bg_color') }}; color: {{ getDesign('btn_deny_text_color') }}"
+    {% if showBtn('deny') or showBtn('accept') %}
+        <div class="ff-cookie_bar_footer">
+            {% if showBtn('deny') %}
+                <a href="" id="js-ff-cookies-deny" class="ff-cookie_bar_btn deny"
+                        {% if not getDesign('disable') %}
+                            style="background-color: {{ getDesign('btn_deny_bg_color') }}; color: {{ getDesign('btn_deny_text_color') }}"
+                        {% endif %}
+                >
+                    {{ 'cookies_bar.deny'|trans({},'GdprBundle') }}
+                </a>
             {% endif %}
-        >
-            {{ 'cookies_bar.deny'|trans({},'GdprBundle') }}
-        </a>
-        <a href="" id="js-ff-cookies-allow" class="ff-cookie_bar_btn allow"
-            {% if not getDesign('disable') %}
-                style="background-color: {{ getDesign('btn_allow_bg_color') }}; color: {{ getDesign('btn_allow_text_color') }}"
+            {% if showBtn('accept') %}
+                <a href="" id="js-ff-cookies-allow" class="ff-cookie_bar_btn allow"
+                        {% if not getDesign('disable') %}
+                            style="background-color: {{ getDesign('btn_allow_bg_color') }}; color: {{ getDesign('btn_allow_text_color') }}"
+                        {% endif %}
+                >
+                    {{ 'cookies.accept'|trans({},'GdprBundle') }}
+                </a>
             {% endif %}
-        >
-            {{ 'cookies.accept'|trans({},'GdprBundle') }}
-        </a>
-    </div>
+        </div>
+    {% endif %}
 </div>

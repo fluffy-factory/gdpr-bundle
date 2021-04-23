@@ -28,6 +28,7 @@ class GdprExtension extends Extension
 
         $container->setParameter('fluffy.gdpr.redirection_url', $config['redirection_url']);
         $container->setParameter('fluffy.gdpr.design', $config['design']);
+        $container->setParameter('fluffy.gdpr.btn', $config['btn']);
         $container->setParameter('fluffy.gdpr.cookies', $config);
     }
 }
