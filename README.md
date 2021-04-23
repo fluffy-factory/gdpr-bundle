@@ -57,7 +57,7 @@ gdpr:
 ```
 
 ```twig
-# privacy.html.twig
+{# privacy.html.twig #}
 
 {% block required_cookies_table %}
     <h2 id="params">{{ 'required_cookies_title'|trans({},'GdprBundle') }}</h2>
