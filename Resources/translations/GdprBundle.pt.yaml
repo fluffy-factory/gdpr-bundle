@@ -1,14 +1,18 @@
-required_cookies_title: 'Cookies que utilizamos'
-optionnal_cookies_title: 'Gestão de cookies'
-
-Details: 'Nome e prazo'
+# Cookie privacy
+cookies:
+  required:
+    title: 'Cookies que utilizamos'
+  optionnal:
+    title: 'Gestão de cookies'
+  name: 'Nome do cookie'
+  description: 'Descrição'
+  details: 'Nome e prazo'
+  accept: 'Concordo'
 
 # Cookie bar
-Cookie_bar_title: 'Este site utiliza cookies'
-Cookie_bar_message: 'Ao continuar a navegar neste site, aceita a utilização de [Cookies ou outros marcadores] que lhe propõem [Por exemplo, anúncios direcionados adaptados aos seus interesses] e [Por exemplo, realizar estatísticas de visitas].'
-See_more: 'Saiba mais'
-Set_cookies: 'Gestão de cookies'
-Accept_cookies: "Concordo"
-Deny_cookies: 'Recuso'
-Description: 'Descrição'
-Cookie_name: 'Nome do cookie'
+cookies_bar:
+  title: 'Este site utiliza cookies'
+  message: 'Ao continuar a navegar neste site, aceita a utilização de [Cookies ou outros marcadores] que lhe propõem [Por exemplo, anúncios direcionados adaptados aos seus interesses] e [Por exemplo, realizar estatísticas de visitas].'
+  see.more: 'Saiba mais'
+  set.cookies: 'Gestão de cookies'
+  deny: 'Recuso'

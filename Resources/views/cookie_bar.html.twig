@@ -5,17 +5,17 @@
 >
     {# Header #}
     <div class="ff-cookie_bar_header">
-        <p>{{ 'Cookie_bar_title'|trans({},'GdprBundle') }}</p>
+        <p>{{ 'cookies_bar.title'|trans({},'GdprBundle') }}</p>
     </div>
 
     {# Body #}
     <div class="ff-cookie_bar_body">
         <p>
-            {{ 'Cookie_bar_message'|trans({},'GdprBundle') }}
+            {{ 'cookies_bar.message'|trans({},'GdprBundle') }}
         </p>
         <p>
-            <a href="{{ path('fluffy_gdpr') }}" class="ff-cookie_bar_link">{{ 'See_more'|trans({},'GdprBundle') }}</a>
-            <a href="{{ path('fluffy_gdpr', {'_fragment': 'params'}) }}" class="ff-cookie_bar_link">{{ 'Set_cookies'|trans({},'GdprBundle') }}</a>
+            <a href="{{ path('fluffy_gdpr') }}" class="ff-cookie_bar_link">{{ 'cookies_bar.see.more'|trans({},'GdprBundle') }}</a>
+            <a href="{{ path('fluffy_gdpr', {'_fragment': 'params'}) }}" class="ff-cookie_bar_link">{{ 'cookies_bar.set.cookies'|trans({},'GdprBundle') }}</a>
         </p>
     </div>
 
@@ -26,14 +26,14 @@
                style="background-color: {{ getDesign('btn_deny_bg_color') }}; color: {{ getDesign('btn_deny_text_color') }}"
             {% endif %}
         >
-            {{ 'Deny_cookies'|trans({},'GdprBundle') }}
+            {{ 'cookies_bar.deny'|trans({},'GdprBundle') }}
         </a>
         <a href="" id="js-ff-cookies-allow" class="ff-cookie_bar_btn allow"
             {% if not getDesign('disable') %}
                 style="background-color: {{ getDesign('btn_allow_bg_color') }}; color: {{ getDesign('btn_allow_text_color') }}"
             {% endif %}
         >
-            {{ 'Accept_cookies'|trans({},'GdprBundle') }}
+            {{ 'cookies.accept'|trans({},'GdprBundle') }}
         </a>
     </div>
 </div>

@@ -1,14 +1,18 @@
-required_cookies_title: 'Cookies que nous utilisons'
-optionnal_cookies_title: 'Paramétrez vos cookies'
-
-Details: 'Nom et échéance'
+# Cookie privacy
+cookies:
+  required:
+    title: 'Cookies que nous utilisons'
+  optionnal:
+    title: 'Paramétrez vos cookies'
+  name: 'Nom du cookie'
+  description: 'Description'
+  details: 'Nom et échéance'
+  accept: "J'accepte"
 
 # Cookie bar
-Cookie_bar_title: 'Ce site utilise des cookies'
-Cookie_bar_message: 'En poursuivant votre navigation sur ce site, vous acceptez l’utilisation de [Cookies ou autres traceurs] pour vous proposer [Par exemple, des publicités ciblées adaptés à vos centres d’intérêts] et [Par exemple, réaliser des statistiques de visites].'
-See_more: 'En savoir plus'
-Set_cookies: 'Paramétrer vos cookies'
-Accept_cookies: "J'accepte"
-Deny_cookies: 'Je refuse'
-Description: 'Description'
-Cookie_name: 'Nom du cookie'
+cookies_bar:
+  title: 'Ce site utilise des cookies'
+  message: 'En poursuivant votre navigation sur ce site, vous acceptez l’utilisation de [Cookies ou autres traceurs] pour vous proposer [Par exemple, des publicités ciblées adaptés à vos centres d’intérêts] et [Par exemple, réaliser des statistiques de visites].'
+  see.more: 'En savoir plus'
+  set.cookies: 'Paramétrer vos cookies'
+  deny: 'Je refuse'

@@ -1,0 +1,18 @@
+# Cookie privacy
+cookies:
+  required:
+    title: 'Cookies wou mir benotzen'
+  optionnal:
+    title: 'Astellung vun ärem cookies'
+  name: 'Nom du cookie'
+  description: 'Beschreiwung'
+  details: 'Numm an Termin'
+  accept: "Ech acceptéieren"
+
+# Cookie bar
+cookies_bar:
+  title: 'Dëse Websäit benotzt cookies'
+  message: 'Wann Dir weider op dësem Site bliedert, Dir acceptéiert all Benotzung vu [Cookien oder aneren Traceren] zou fir Iech [Zum Beispill, Reklammen ugepasst op Är Interessegebidder] an [Zum Beispill fir Besuchsstatistiken ze generéieren].'
+  see.more: 'Fir méi Informatiounen'
+  set.cookies: 'Astellung vun ärem cookies'
+  deny: 'Ech refuséieren'

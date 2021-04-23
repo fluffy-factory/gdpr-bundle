@@ -1,11 +1,11 @@
 {% block required_cookies_table %}
-    <h2 id="params">{{ 'required_cookies_title'|trans({},'GdprBundle') }}</h2>
+    <h2 id="params">{{ 'cookies.required.title'|trans({},'GdprBundle') }}</h2>
     <table>
         <thead>
         <tr>
-            <th>{{ 'Cookie_name'|trans({},'GdprBundle') }}</th>
-            <th>{{ 'Description'|trans({},'GdprBundle') }}</th>
-            <th>{{ 'Details'|trans({},'GdprBundle') }}</th>
+            <th>{{ 'cookies.name'|trans({},'GdprBundle') }}</th>
+            <th>{{ 'cookies.description'|trans({},'GdprBundle') }}</th>
+            <th>{{ 'cookies.details'|trans({},'GdprBundle') }}</th>
         </tr>
         </thead>
         <tbody>
@@ -21,7 +21,7 @@
 {% endblock %}
 
 {% block optionnal_cookies_table %}
-    <h2>{{ 'optionnal_cookies_title'|trans({},'GdprBundle') }}</h2>
+    <h2>{{ 'cookies.optionnal.title'|trans({},'GdprBundle') }}</h2>
 
     {{ form_start(form) }}
     {% for key, optionnal in optionnal_cookies %}
@@ -31,6 +31,6 @@
         <p>{{ optionnal.detail }}</p>
     {% endfor %}
 
-    <button type="submit">{{ 'Accept_cookies'|trans({},'GdprBundle') }}</button>
+    <button type="submit">{{ 'cookies.accept'|trans({},'GdprBundle') }}</button>
     {{ form_end(form) }}
 {% endblock %}

@@ -1,0 +1,18 @@
+# Cookie privacy
+cookies:
+  required:
+    title: 'Cookie die wir nutzen'
+  optionnal:
+    title: 'Konfigurieren Sie Ihre Cookies'
+  name: 'Cookie Name'
+  description: 'Bezeichnung'
+  details: 'Name und Fälligkeit'
+  accept: "Akzeptieren"
+
+# Cookie bar
+cookies_bar:
+  title: 'Diese Website verwendet Cookies'
+  message: 'Wenn Sie diese Website weiterhin verwenden, stimmen Sie der Verwendung von [Cookies oder anderen Trackern] zu, um Ihnen [z. B. gezielte Werbung, die auf Ihre Interessen angepasst ist] und [zum Beispiel Besuchsstatistiken zu erstellen]'
+  see.more: 'Mehr'
+  set.cookies: 'Konfigurieren Sie Ihre Cookies'
+  deny: 'Ich lehne ab'
