@@ -18,6 +18,9 @@ php bin/console asset:install
 
 gdpr:
   redirection_url: 'fluffy_gdpr' # If you don't specify a route, the user will be redirected to the route he is on.
+  btn:
+    deny: true
+    accept: true
   design:
     disable: false
     bg_color: '#292e33'
